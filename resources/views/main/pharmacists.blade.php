@@ -75,7 +75,7 @@
                                 <td>{{ $pharmacist->email }}</td>
                                 <td>
                                     <button onclick="deletePharmacist({{ $pharmacist->id }})" class="btn btn-danger">O‘chirish</button>
-                                    <button onclick="sendMedicine()" class="btn btn-warning">Dori jo'natish</button>
+                                    <button onclick="sendMedicine({{ $pharmacist->id }})" class="btn btn-warning">Dori jo'natish</button>
                                 </td>
                             </tr>
                         @endforeach
