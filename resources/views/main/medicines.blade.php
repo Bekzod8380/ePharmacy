@@ -286,8 +286,12 @@
                     <form id="doctorForm">
                         <div class="row g-2">
                             <div class="col mb-3">
-                                <label class="input-group">Mahsulot miqdori(soni)</label>
+                                <label class="input-group">Mahsulot soni</label>
                                 <input type="number" name="count" id="count" class="form-control" required placeholder="Soni">
+                            </div>
+                            <div class="col mb-3">
+                                <label class="input-group">Mahsulot miqdori</label>
+                                <input type="number" id="count" class="form-control" required placeholder="gr, ml">
                             </div>
                         </div>
                     </form>
