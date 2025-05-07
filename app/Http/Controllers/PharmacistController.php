@@ -31,7 +31,7 @@ class PharmacistController extends Controller
         $doctor = User::create($request->all());
         $doctor->assignRole('pharmacist');
 
-        return response()->json(['message' => 'Aptekachi saqlandi!']);
+        return response()->json(['message' => 'Dorixonachi saqlandi!']);
     }
 
     /**

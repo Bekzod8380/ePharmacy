@@ -49,9 +49,9 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title fw-semibold mb-4">Aptekachilar</h5>
+                <h5 class="card-title fw-semibold mb-4">Dori sotuvchilar</h5>
                 <div class="btn-add-box text-end">
-                    <button id="add_pharmacist" class="btn btn-success">Aptekachi qo'shish</button>
+                    <button id="add_pharmacist" class="btn btn-success">Dorixonachi qo'shish</button>
                 </div>
                 <div class="table-responsive">
                     <table class="table text-nowrap mb-0 align-middle">
@@ -225,7 +225,7 @@
         }
         document.getElementById("add_pharmacist").addEventListener("click", function () {
             Swal.fire({
-                title: "Aptekachi qo'shish",
+                title: "Dorixonachi qo'shish",
                 html: `
                     <form>
                         <div class="row g-2">
@@ -240,6 +240,11 @@
                         </div>
                         <div class="row g-2">
                             <div class="col mb-3">
+                                <input type="text" name="address" id="address" required class="form-control" placeholder="Manzili">
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col mb-3">
                                 <input type="password" name="password" id="password" required class="form-control" placeholder="Parol">
                             </div>
                         </div>
@@ -250,6 +255,7 @@
                 preConfirm: () => {
                     const name = document.getElementById("name").value;
                     const email = document.getElementById("email").value;
+                    const address = document.getElementById("address").value;
                     const password = document.getElementById("password").value;
 
                     if (!name || !email || !password) {
@@ -263,7 +269,7 @@
                             "Content-Type": "application/json",
                             "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
                         },
-                        body: JSON.stringify({ name, email, password })
+                        body: JSON.stringify({ name, email, address, password })
                     })
                         .then(response => {
                             if (!response.ok) {
@@ -323,7 +329,7 @@
                 }
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire("O‘chirildi!", "Aptekachi ma’lumotlari o‘chirildi.", "success")
+                    Swal.fire("O‘chirildi!", "Dorixonachi ma’lumotlari o‘chirildi.", "success")
                         .then(() => {
                             window.location.reload();
                         });

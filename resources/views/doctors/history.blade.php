@@ -66,7 +66,7 @@
                                 <tr>
                                     <td>{{$val->patient->FISH}}</td>
                                     <td>{{$val->patient->passport}}</td>
-                                    <td>{{$val->patient->address}}</td>
+                                    <td>{{$val->pharmacist->address}}</td>
                                     <td>{{$val->medicine->name}}</td>
                                     <td>{{$val->quantity}}</td>
                                 </tr>

@@ -248,7 +248,12 @@
                         </div>
                         <div class="row g-2">
                             <div class="col mb-3">
-                                <input type="number" name="quantity" id="quantity" class="form-control" required placeholder="Miqdori">
+                                <input type="number" name="quantity" id="quantity" class="form-control" required placeholder="Soni">
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col mb-3">
+                                <input type="number" class="form-control" required placeholder="Miqdori(gr, ml)">
                             </div>
                         </div>
                         <div class="row g-2">

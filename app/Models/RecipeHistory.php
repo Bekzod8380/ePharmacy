@@ -30,4 +30,9 @@ class RecipeHistory extends Model
     {
         return $this->belongsTo(Medicine::class);
     }
+
+    public function pharmacist()
+    {
+        return $this->belongsTo(User::class, 'pharmacist_id');
+    }
 }

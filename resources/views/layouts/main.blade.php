@@ -52,7 +52,7 @@
                             <span>
                               <i class="ti ti-cards"></i>
                             </span>
-                            <span class="hide-menu">Aptekachi</span>
+                            <span class="hide-menu">Dorixonachilar</span>
                         </a>
                     </li>
 

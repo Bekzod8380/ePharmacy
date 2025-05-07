@@ -32,5 +32,10 @@ class TypeMedicineSeeder extends Seeder
                 'name' => 'Osma ukol'
             ]
         );
+        TypeMedicine::create(
+            [
+                'name' => 'Maz'
+            ]
+        );
     }
 }

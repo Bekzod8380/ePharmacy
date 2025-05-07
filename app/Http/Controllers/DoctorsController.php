@@ -36,7 +36,7 @@ class DoctorsController extends Controller
 
     public function history()
     {
-        $history = RecipeHistory::with('patient', 'medicine')
+        $history = RecipeHistory::with('patient', 'medicine', 'pharmacist')
             ->where('user_id', auth()->id())
             ->get();
 

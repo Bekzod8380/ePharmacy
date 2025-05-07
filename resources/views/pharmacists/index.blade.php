@@ -65,6 +65,7 @@
                             </thead>
                             <tbody>
                             @foreach($data as $val)
+                            <tr>
                                 <td>{{$val->patient->FISH}}</td>
                                 <td>{{$val->patient->passport}}</td>
                                 <td>{{$val->patient->address}}</td>
@@ -74,6 +75,7 @@
                                 <th>
                                     <button onclick="completeWork({{$val->id}}, '{{$val->medicine->name}}', {{$val->quantity}}, {{$val->quantity * $val->medicine->price}})" class="btn btn-primary">Yakunlash</button>
                                 </th>
+                            </tr>
                             @endforeach
                             </tbody>
                         </table>

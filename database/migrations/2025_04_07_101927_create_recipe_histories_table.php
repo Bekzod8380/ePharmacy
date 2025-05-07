@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('medicine_id')->constrained('medicines');
             $table->foreignId('pharmacist_id')->constrained('users');
             $table->integer('quantity');
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }
